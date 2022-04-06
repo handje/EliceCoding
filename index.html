@@ -12,13 +12,49 @@
       }
       h1 {
         border-bottom: 10px solid green;
+        margin-bottom: 0;
       }
 
       #container {
         display: grid;
         grid-template-columns: 150px 1fr;
       }
+      ol {
+        border-right: 10px solid green;
+        margin-top: 0;
+      }
+      #content {
+        margin-left: 10px;
+        margin-top: 0;
+      }
+      h2 {
+        margin-top: 0;
+      }
+
+      @media all and (max-width: 600px) {
+        #container {
+          display: block;
+        }
+        ol {
+          border: none;
+          border-bottom: 10px solid green;
+        }
+      }
     </style>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-B6RW2EKK3B"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-B6RW2EKK3B");
+    </script>
   </head>
   <body>
     <h1 style="text-align: center"><a href="index.html">Elice Coding</a></h1>
@@ -30,7 +66,7 @@
         <li><a href="css.html">CSS</a></li>
         <li><a href="js.html">JS</a></li>
       </ol>
-      <div>
+      <div id="content">
         <h2>Welcome to Web</h2>
         Hello,WEB!!!
       </div>
