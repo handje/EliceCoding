@@ -5,21 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Elice</title>
+    <style>
+      a {
+        text-decoration: none;
+        color: black;
+      }
+      h1 {
+        border-bottom: 10px solid green;
+      }
+
+      #container {
+        display: grid;
+        grid-template-columns: 150px 1fr;
+      }
+    </style>
   </head>
   <body>
     <h1 style="text-align: center"><a href="index.html">Elice Coding</a></h1>
-    <h2>Welcome to Web</h2>
-    WWW is<strong> World <u>Wide</u> WEB.</strong>
-    <br />
-    <ol>
-      <li>
-        <a href="html.html">HTML</a>
-      </li>
-      <li><a href="css.html">CSS</a></li>
-      <li><a href="js.html">JS</a></li>
-    </ol>
-    <div id="disqus_thread"></div>
-    <script>
+    <div id="container">
+      <ol>
+        <li>
+          <a href="html.html">HTML</a>
+        </li>
+        <li><a href="css.html">CSS</a></li>
+        <li><a href="js.html">JS</a></li>
+      </ol>
+      <div>
+        <h2>Welcome to Web</h2>
+        Hello,WEB!!!
+      </div>
+    </div>
+    <!-- <div id="disqus_thread"></div> -->
+    <!-- <script>
       /**
        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
@@ -43,6 +60,6 @@
       <a href="https://disqus.com/?ref_noscript"
         >comments powered by Disqus.</a
       ></noscript
-    >
+    > -->
   </body>
 </html>
