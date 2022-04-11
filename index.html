@@ -8,9 +8,10 @@
     <style>
       a {
         text-decoration: none;
-        color: black;
+        color: purple;
       }
       h1 {
+        color: purple;
         border-bottom: 10px solid green;
         margin-bottom: 0;
       }
@@ -41,7 +42,7 @@
         }
       }
     </style>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- Global site tag (gtag.js) - Google Analytics
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-B6RW2EKK3B"
@@ -54,9 +55,19 @@
       gtag("js", new Date());
 
       gtag("config", "G-B6RW2EKK3B");
-    </script>
+    </script> -->
   </head>
   <body>
+    <input
+      type="button"
+      value="dark"
+      onclick="document.querySelector('body').style.color='white';document.querySelector('body').style.backgroundColor='black'"
+    />
+    <input
+      type="button"
+      value="light"
+      onclick="document.querySelector('body').style.color='black';document.querySelector('body').style.backgroundColor='white'"
+    />
     <h1 style="text-align: center"><a href="index.html">Elice Coding</a></h1>
     <div id="container">
       <ol>
