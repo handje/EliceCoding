@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--array-->
+    <h1>배열-array</h1>
+    [서로 연관된 데이터를 그룹핑한 후에 이름을 붙인 것]
+    <script>
+      let contents = ["html", "css", "js"];
+      contents.push("react");
+    </script>
+    <h1>반복문</h1>
+
+    <script>
+      //debugger: 한줄씩 실행
+      console.log(1);
+      for (let i = 0; i < 3; i = i + 1) {
+        console.log(2);
+        console.log(3);
+      }
+      console.log(4);
+    </script>
+    <h2>Array+For</h2>
+    <ul>
+      <script>
+        for (let c of contents) {
+          document.write(`<li>${c}</li>`);
+        }
+      </script>
+    </ul>
+  </body>
+</html>
