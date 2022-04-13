@@ -58,16 +58,25 @@
     </script> -->
   </head>
   <body>
+    <script>
+      console.log(this); //window
+    </script>
     <input
       type="button"
       value="dark"
-      onclick="document.querySelector('body').style.color='white';document.querySelector('body').style.backgroundColor='black'"
+      onclick="
+      if(this.value==='dark'){ //button을 가리킴
+        document.querySelector('body').style.color='white';
+        document.querySelector('body').style.backgroundColor='black';
+        this.value='light'
+      }else{
+        document.querySelector('body').style.color='black';
+        document.querySelector('body').style.backgroundColor='white';
+        this.value='dark'
+      }
+      "
     />
-    <input
-      type="button"
-      value="light"
-      onclick="document.querySelector('body').style.color='black';document.querySelector('body').style.backgroundColor='white'"
-    />
+
     <h1 style="text-align: center"><a href="index.html">Elice Coding</a></h1>
     <div id="container">
       <ol>
