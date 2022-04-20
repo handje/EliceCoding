@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1><a href="/">Web</a></h1>
+    </header>
+    <nav>
+      <ol>
+        <!-- 동적으로 바뀔 영역
+            <li><a href="/read/1">html</a></li>
+        <li><a href="/read/2">css</a></li> -->
+      </ol>
+    </nav>
+    <article>
+      <!-- 동적으로 바뀔 영역
+          <h2>Welcome</h2>
+      Hello, web -->
+    </article>
+    <ul id="control">
+      <!-- 동적으로 바뀔 영역
+          <li><a href="">Create</a></li>
+      <li><a href="">Update</a></li>
+      <li><a href="">Delete</a></li> -->
+    </ul>
+    <script>
+      const topics = [
+        { id: 1, title: "html", body: "html is..." },
+        { id: 2, title: "css", body: "css is..." },
+      ];
+      let selectedId = null;
+
+      //nav onclick시 사용되는 fn
+      function navHandler(e) {
+        //1.링크 작동x
+        e.preventDefault();
+        //2.id값 찾기
+        selectedId = Number(e.target.id);
+        read();
+      }
+      //nav의 내용을 동적으로 생성하는 함수
+      function nav() {
+        const tag = topics
+          .map((e) => {
+            return `<li>
+                    <a href="/read/${e.id}" 
+                        id="${e.id}" 
+                        onclick="navHandler(event)">
+                    ${e.title}
+                    </a>
+                </li>`;
+          })
+          .join("");
+        document.querySelector("nav>ol").innerHTML = tag;
+      }
+
+      //article fn
+      function welcome() {}
+
+      //read fn
+      function read() {
+        //3.id와 일치하는 topics의 원소 찾기
+        const topic = topics.filter((e) => {
+          return e.id === selectedId;
+        });
+        //4.본문 만들기
+        const content = `<h2>${topic[0].title}</h2>${topic[0].body}`;
+        //5.본문 출력
+        document.querySelector("article").innerHTML = content;
+      }
+
+      //create fn
+      function create() {}
+
+      //update fn
+      function update() {}
+
+      //delete fn
+      function del() {}
+
+      //control 내용을 동적으로 보여주는 함수
+      function control() {}
+      nav();
+    </script>
+  </body>
+</html>
